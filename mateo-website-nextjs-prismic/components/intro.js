@@ -8,7 +8,7 @@ export default function Intro() {
           Let's put your flats on autopilot.
       </h1>
         <h4 className="mt-8 text-base sm:mt-8 sm:text-lg sm:mx-auto md:mt-8 md:text-3xl lg:mx-0">
-            We free up landlords from manual operational tasks by putting their portfolio on autopilot, while creating a geniue connection between tenants and landlords.
+            We free up landlords from manual operational tasks by putting their portfolio on autopilot, while creating a genuine connection between tenants and landlords.
         </h4>
         <div className="mt-8 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="mt-3 sm:mt-0 rounded-md flex-grow md:max-w-md">
