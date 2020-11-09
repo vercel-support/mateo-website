@@ -28,7 +28,7 @@ export default function Intro() {
             </div>
         </div>
         <div className="mt-32 mb-32 text-base sm:mt-9 sm:text-lg sm:mx-auto md:mt-9 md:text-xl lg:mx-0">
-            <img className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+            <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
                  src="./images/mateo-preview.png"
                  alt=""/>
         </div>

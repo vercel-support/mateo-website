@@ -37,21 +37,24 @@ export default function Alert({ preview }) {
         <div style={{display: showMe?"block":"none"}} className="transition transform fixed z-100 bottom-0 inset-x-0 pb-2 sm:pb-5 opacity-100 scale-100 translate-y-0 ease-out duration-500">
             <div className="max-w-screen-xl mx-auto px-2 sm:px-4">
                 <div className="p-2 rounded-lg bg-black shadow-lg sm:p-3">
-                    <div className="flex items-center justify-between flex-wrap">
-                        <div className="w-0 flex-1 flex items-center">
+                    <div className="sm:flex sm:justify-center lg:justify-start">
+                        <div className="flex-1 flex items-center">
                             <div
-                            className="ml-3 font-medium text-white truncate"><span>This website uses <strong className="text-white font-semibold mr-1">cookies</strong>to enhance your experience. <a href={`https://instagram.com/mateo.estate`} className="hover:underline hover:pointer mb-1 text-white">Learn more</a>
+                            className="order-1 ml-3 font-medium text-white"><span>This website uses <strong className="text-white font-semibold mr-1">cookies</strong>to enhance your experience. <a href={`https://instagram.com/mateo.estate`} className="hover:underline hover:pointer mb-1 text-white">Learn more</a>
                             </span>
-                        </div></div>
-                        <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                            <div className="rounded-md shadow-sm"><button
-                                onClick={toggle}
-                                className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-white hover:text-gray-800 focus:outline-none focus:underline">Accept</button></div>
+                            </div>
                         </div>
-                        <div className="order-3 mt-2 ml-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-                            <div className="rounded-md shadow-sm"><button
-                                onClick={toggle}
-                                className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-gray-600 hover:text-gray-800 focus:outline-none focus:underline">Decline</button></div>
+                        <div className="flex-1 flex items-center">
+                        <div className="mt-3 sm:mt-0 mr-1 sm:ml-3 flex-grow rounded-md" onClick={toggle}>
+                            <a href="https://cdn.forms-content.sg-form.com/c6532c96-e2b1-11ea-8f23-fedb32b3ac17" className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-white hover:text-gray-800 focus:outline-none focus:underline">
+                                Accept
+                            </a>
+                        </div>
+                        <div className="mt-3 ml-1 sm:mt-0 sm:ml-3 flex-grow rounded-md" onClick={toggle}>
+                            <a href="https://cdn.forms-content.sg-form.com/c6532c96-e2b1-11ea-8f23-fedb32b3ac17" className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-gray-900 bg-gray-600 hover:text-gray-800 focus:outline-none focus:underline">
+                                Decline
+                            </a>
+                        </div>
                         </div>
 
                     </div>
