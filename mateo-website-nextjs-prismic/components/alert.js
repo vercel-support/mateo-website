@@ -60,14 +60,14 @@ export default function Alert({ preview }) {
                     <div className="sm:flex sm:justify-center lg:justify-start mt-3">
                         <div className="flex-1 flex items-center">
                         <div className="mt-1 sm:mt-1 mr-1 sm:ml-1 mb-1 flex-grow rounded-md" onClick={toggle}>
-                            <a href="" className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-black hover:text-gray-800 focus:outline-none focus:underline">
+                            <div className="cursor-pointer flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-black hover:text-gray-800 focus:outline-none focus:underline">
                                 Accept
-                            </a>
+                            </div>
                         </div>
                         <div className="mt-1 ml-3 sm:mt-1 sm:ml-3 mb-1 flex-grow rounded-md" onClick={toggle}>
-                            <a href="" className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium bg-gray-300 rounded-md text-black hover:text-gray-800 focus:outline-none focus:underline">
+                            <div className="cursor-pointer flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium bg-gray-300 rounded-md text-black hover:text-gray-800 focus:outline-none focus:underline">
                                 Decline
-                            </a>
+                            </div>
                         </div>
                         </div>
 
