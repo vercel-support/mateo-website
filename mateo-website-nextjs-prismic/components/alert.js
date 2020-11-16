@@ -15,12 +15,12 @@ export default function Alert({ preview }) {
       })}
     >
 
-        <div style={{display: showMe?"block":"none"}} className="transition transform fixed z-5 opacity-75 ease-out duration-500">
+     {/*   <div style={{display: showMe?"block":"none"}} className="transition transform fixed z-5 opacity-75 ease-out duration-500">
 
                 <div className="bg-black w-screen h-screen">
                 </div>
 
-        </div>
+        </div>*/}
 
       <Container>
         <div className="py-2 text-center text-sm">
