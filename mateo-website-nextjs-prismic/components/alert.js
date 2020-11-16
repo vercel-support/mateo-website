@@ -44,7 +44,7 @@ export default function Alert({ preview }) {
 
 
 
-        <div style={{display: showMe?"block":"none"}} className="transition transform fixed z-100 bottom-0 right-0 pb-2 sm:pb-5 opacity-100 scale-100 translate-y-0 ease-out duration-500">
+       {/* <div style={{display: showMe?"block":"none"}} className="transition transform fixed z-100 bottom-0 right-0 pb-2 sm:pb-5 opacity-100 scale-100 translate-y-0 ease-out duration-500">
             <div className="mx-auto max-w-md px-4 sm:px-4">
                 <div className="p-3 rounded-lg bg-white shadow-lg">
                     <div className="flex flex-col sm:flex justify-start ml-1">
@@ -74,7 +74,7 @@ export default function Alert({ preview }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div>*/}
 
     </div>
   )
