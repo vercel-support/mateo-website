@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
       <Html lang="en">
           <script async src="https://www.googletagmanager.com/gtag/js?id=G-CF3DTMKFR4"></script>
           <script src="scripts/ga.js" async></script>
-          <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=e2787f68-6b11-460d-9abd-9eedd5587844"> </script>
+          <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/8830851.js"></script>
 
         <Head />
         <body>
