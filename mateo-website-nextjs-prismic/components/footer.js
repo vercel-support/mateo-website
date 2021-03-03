@@ -1,5 +1,5 @@
 import Container from './container'
-import { EXAMPLE_PATH } from '../lib/constants'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFacebook, faInstagram, faLinkedin, faTwitter} from "@fortawesome/free-brands-svg-icons";
 

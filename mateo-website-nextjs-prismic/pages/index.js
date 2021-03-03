@@ -3,18 +3,17 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPostsForHome } from '../lib/api'
+
 import Head from 'next/head'
-import { NAME } from '../lib/constants'
 import Header from "../components/header";
 
-export default function Index({ preview, allPosts }) {
+export default function Homepage() {
 
   return (
     <>
-      <Layout preview={preview}>
+      <Layout >
         <Head>
-          <title>{NAME} - The Better Way To Rent</title>
+          <title>MATEO - The Better Way To Rent</title>
         </Head>
         <Container>
           <Header />
@@ -23,11 +22,4 @@ export default function Index({ preview, allPosts }) {
       </Layout>
     </>
   )
-}
-
-export async function getStaticProps({ preview = false, previewData }) {
-  const allPosts = await getAllPostsForHome(previewData)
-  return {
-    props: { preview, allPosts },
-  }
 }
