@@ -22,7 +22,7 @@ export default function Intro() {
         </div>
         <div className="mt-16 mb-16 text-base sm:mt-9 sm:text-lg sm:mx-auto md:mt-9 md:text-xl lg:mx-0">
             <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                 src="./images/mateoflows.png"
+                 src="./images/mateoflows1.png"
                  alt=""/>
         </div>
 
@@ -44,7 +44,7 @@ export default function Intro() {
 
               <div className="pl-16 text-base sm:text-lg sm:mx-auto md:text-xl lg:mx-0">
                   <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                       src="./images/mateoflow.png"
+                       src="./images/mateoflow1.png"
                        alt=""/>
               </div>
               </div>
@@ -54,7 +54,7 @@ export default function Intro() {
               <div className="flex flex-row items-center">
                   <div className="pr-16 text-base sm:text-lg sm:mx-auto md:text-xl lg:mx-0">
                       <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                           src="./images/mateoflat.png"
+                           src="./images/mateoflat1.png"
                            alt=""/>
                   </div>
                   <div>
@@ -92,7 +92,7 @@ export default function Intro() {
                   </div>
                   <div className="pl-16 text-base sm:text-lg sm:mx-auto md:text-xl lg:mx-0">
                       <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                           src="./images/mateohome.png"
+                           src="./images/mateohome1.png"
                            alt=""/>
                   </div>
 
