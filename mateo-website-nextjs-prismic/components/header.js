@@ -20,23 +20,11 @@ export default function Header() {
                       <a className="hover:underline">Über Uns</a>
                   </Link>
               </h2>
-              <div>
-                  <div className="text-lg font-bold p-3 text-white rounded-md" style={{
-                      backgroundImage: 'url(' + './images/mateobackground.jpg' + ')',
-                      backgroundPosition: 'center',
-                      backgroundSize: 'cover',
-                      backgroundRepeat: 'no-repeat',
-                  }}>
-                  Kostenlos Testen
-                  </div>
-              </div>
           </div>
-
 
           <div className="flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
               <img src="./images/menu.svg" width="20px;" height="20px;"/>
           </div>
-
 
           <Transition
               show={isOpen}
