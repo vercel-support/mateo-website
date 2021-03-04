@@ -14,16 +14,17 @@ export default function Header() {
     </h2>
           <div className="flex-grow"></div>
           <div className="hidden md:flex flex-row items-center">
-
+              <h2 className="text-xl font-bold mr-10">
+                  <Link href="/funktionen">
+                      <a className="hover:underline">Funktionen</a>
+                  </Link>
+              </h2>
               <h2 className="text-xl font-bold mr-10">
                   <Link href="/ueberuns">
                       <a className="hover:underline">Über Uns</a>
                   </Link>
               </h2>
-              
           </div>
-
-
           <div className="flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
               <img src="./images/menu.svg" width="20px;" height="20px;"/>
           </div>
@@ -53,10 +54,16 @@ export default function Header() {
                   </div>
               </div>
               <h2 className="text-xl font-bold mt-5 mr-10">
+                  <Link href="/funktionen">
+                      <a className="hover:underline">Funktionen</a>
+                  </Link>
+              </h2>
+              <h2 className="text-xl font-bold mt-5 mr-10">
                   <Link href="/ueberuns">
                       <a className="hover:underline">Über Uns</a>
                   </Link>
               </h2>
+
           </div>
           </Transition>
       </div>
