@@ -14,11 +14,7 @@ export default function Header() {
     </h2>
           <div className="flex-grow"></div>
           <div className="hidden md:flex flex-row items-center">
-              <h2 className="text-xl font-bold mr-5">
-                  <Link href="/funktionen">
-                      <a className="hover:underline">Funktionalitäten</a>
-                  </Link>
-              </h2>
+
               <h2 className="text-xl font-bold mr-10">
                   <Link href="/ueberuns">
                       <a className="hover:underline">Über Uns</a>
@@ -65,11 +61,6 @@ export default function Header() {
                   <img src="./images/cross.svg" width="20px;" height="20px;"/>
                   </div>
               </div>
-              <h2 className="text-xl font-bold mt-10 mr-5">
-                  <Link href="/funktionen">
-                      <a className="hover:underline">Funktionalitäten</a>
-                  </Link>
-              </h2>
               <h2 className="text-xl font-bold mt-5 mr-10">
                   <Link href="/ueberuns">
                       <a className="hover:underline">Über Uns</a>
