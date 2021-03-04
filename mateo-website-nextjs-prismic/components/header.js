@@ -9,7 +9,7 @@ export default function Header() {
       <div className="flex flex-row items-center mb-20 mt-8">
     <h2 className="text-2xl md:text-4xl font-bold">
       <Link href="/">
-        <a className="hover:underline">MATEO</a>
+        <img src="./images/mateologo.png" width="60px;"/>
       </Link>
     </h2>
           <div className="flex-grow"></div>
