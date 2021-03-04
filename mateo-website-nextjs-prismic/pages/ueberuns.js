@@ -17,7 +17,7 @@ export default function Homepage() {
                     <Header/>
 
                     <div>
-                        <div className="font-extrabold sm:text-4xl md:text-6xl items-center lg:text-7xl text-center mx-10
+                        <div className="font-extrabold text-2xl sm:text-6xl md:text-6xl items-center lg:text-7xl text-center mx-10
                         bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500
             bg-repeat
             bg-clip-text
@@ -26,7 +26,7 @@ export default function Homepage() {
             antialiased mb-5">
                             Die Softwarelösung, die aus Mitarbeitern und Mietern wahre Fans macht.
                         </div>
-                        <div className="grid grid-cols-2 mt-20">
+                        <div className="grid md:grid-cols-2 mt-20">
                                 <div className="flex justify-center items-center lg:col-span-1 ">
                                     <img
                                         className="rounded-full h-24 w-24 flex items-center justify-center h-48 w-48"
@@ -51,7 +51,7 @@ export default function Homepage() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-2 mt-20">
+                        <div className="grid md:grid-cols-2 mt-20">
                             <div className="flex justify-center items-center lg:col-span-1 order-2 ">
                                 <img
                                     className="rounded-full h-24 w-24 flex items-center justify-center h-48 w-48"
