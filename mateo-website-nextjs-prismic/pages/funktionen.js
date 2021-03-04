@@ -11,11 +11,11 @@ export default function Homepage() {
     <>
       <Layout >
         <Head>
-          <title>MATEO - The Better Way To Rent</title>
+          <title>MATEO - Funktionen</title>
         </Head>
         <Container>
           <Header />
-          <Intro />
+
         </Container>
       </Layout>
     </>
