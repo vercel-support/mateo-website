@@ -4,14 +4,16 @@ import Layout from '../components/layout'
 
 import Head from 'next/head'
 import Header from "../components/header";
-
+import {useState} from 'react'
 
 
 export default function Homepage() {
 
+    const [toggle, setToggle] = useState(false);
+
 
     const onClick = () => {
-
+        setToggle(!toggle)
     }
 
     return (
@@ -24,27 +26,51 @@ export default function Homepage() {
                     <Header/>
                     <section className="flex-col items-center md:justify-between mt-16 mb-32 sm:mt-32 sm:mb-32">
                         <div>
-                            <div className="font-extrabold text-2xl sm:text-6xl md:text-6xl items-center lg:text-7xl text-center mx-10
+                            <div className="font-extrabold text-3xl sm:text-6xl md:text-6xl items-center lg:text-7xl text-center mx-10
                         bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500
             bg-repeat
             bg-clip-text
             text-transparent
             uppercase
             antialiased mb-5">
-                                Der Autopilot für Ihre persönliche Mieterinteraktion.
+                                Der Autopilot für Ihre persönliche Mieter Interaktion.
                             </div>
                         </div>
 
                         <div className="mt-20 flex flex-col items-center justify-items-center">
-                        <label htmlFor="toggle" className=" uppercase font-extrabold text-3xl">Jetzt automatisieren</label>
-                        <div
-                            className="relative inline-block w-48 align-middle select-none transition duration-200 ease-in">
-                            <input type="checkbox" name="toggle" id="toggle"
-                                   className="toggle-checkbox absolute block w-16 h-16 rounded-full border-green-400 right-0 bg-white border-4 appearance-none cursor-pointer"/>
-                            <label htmlFor="toggle"
-                                   className="toggle-label block overflow-hidden h-16 rounded-full bg-green-300 cursor-pointer"></label>
+                            <label htmlFor="toggle" className=" uppercase font-extrabold text-3xl text-center">Starte Deinen Autopilot</label>
+                            <div
+                                className="mt-5 relative inline-block w-48 align-middle select-none transition duration-200 ease-in">
+                                <input type="checkbox" name="toggle" id="toggle" onClick={onClick}
+                                       className="focus:outline-none  toggle-checkbox absolute block w-16 h-16 rounded-full border-green-400 right-0 bg-white border-4 appearance-none cursor-pointer"/>
+                                <label htmlFor="toggle"
+                                       className="toggle-label block overflow-hidden h-16 rounded-full bg-green-300 cursor-pointer"></label>
+                            </div>
                         </div>
-                        </div>
+
+
+                        {toggle ?
+                        <form>
+                            <div className="mt-8 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div className="mt-3 sm:mt-0 rounded-md flex-grow md:max-w-md">
+                                    <input href="#" x-model="email" type="email" required=""
+                                           placeholder="Enter your email"
+                                           className="w-full flex items-center justify-center px-8 py-3 text-base leading-6 font-medium rounded-md appearance-none border border-gray-300 shadow-none bg-white rounded-md placeholder-gray-500 focus:outline-none focus:border-green-400 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:py-4 md:text-lg md:px-5"/>
+                                </div>
+                                <div className="mt-3 sm:mt-0 sm:ml-3 rounded-md">
+                                    <button type="submit"
+                                            className="w-full  uppercase font-bold  flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white transition duration-150 ease-in-out md:py-4 md:text-lg md:py-4 md:text-lg md:px-10"
+                                            style={{
+                                                backgroundImage: 'url(' + './images/mateobackground.jpg' + ')',
+                                                backgroundPosition: 'center',
+                                                backgroundSize: 'cover',
+                                                backgroundRepeat: 'no-repeat',
+                                            }}>
+                                        Kostenlos Testen
+                                    </button>
+                                </div>
+                            </div>
+                        </form> : '' }
 
                         <div className="mt-16 mb-16 text-base sm:mt-9 sm:text-lg sm:mx-auto md:mt-9 md:text-xl lg:mx-0">
                             <img className=" w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
