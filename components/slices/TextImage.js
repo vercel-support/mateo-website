@@ -5,7 +5,7 @@ const TextImage = ({ slice }) => {
   console.log(slice);
   return (
     <section className="">
-      <div className="">SLICE</div>
+      <div className="">{slice.primary.sectionTitle.text}</div>
     </section>
   );
 };
