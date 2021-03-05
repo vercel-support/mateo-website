@@ -16,7 +16,6 @@ export default function Post({ post, morePosts, preview }) {
   if (!router.isFallback && !post?._meta?.uid) {
     return <ErrorPage statusCode={404} />;
   }
-
   return (
     <Layout preview={preview}>
       <Container>
@@ -48,7 +47,7 @@ export default function Post({ post, morePosts, preview }) {
                 </div>
                 <div className="max-w-2xl mx-auto">
                   <div className="block md:hidden mb-6">
-                    {author && (
+                    {post.author && (
                       <Avatar
                         name={post.author.name}
                         picture={post.author.picture}

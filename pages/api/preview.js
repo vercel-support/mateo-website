@@ -5,6 +5,9 @@ function linkResolver(doc) {
   if (doc.type === "post") {
     return `/posts/${doc.uid}`;
   }
+  if (doc.type === "page") {
+    return `/${doc.uid}`;
+  }
 
   // Fallback for other types, in case new custom types get created
   return `/${doc.uid}`;

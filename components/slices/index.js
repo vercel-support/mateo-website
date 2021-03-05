@@ -1,1 +1,1 @@
-export { default as LeftImageRightText } from "./LeftImageRightText";
+export { default as TextImage } from "./TextImage";
