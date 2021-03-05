@@ -4,7 +4,6 @@ import Head from "next/head";
 import ErrorPage from "next/error";
 import Container from "../../components/container";
 import Header from "../../components/header";
-import PostHeader from "../../components/post-header";
 import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
 import { RichText } from "prismic-reactjs";
