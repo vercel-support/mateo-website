@@ -2,7 +2,6 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ErrorPage from "next/error";
-import Container from "../../components/container";
 import Header from "../../components/header";
 import Layout from "../../components/layout";
 import { getAllPostsWithSlug, getPostAndMorePosts } from "../../lib/api";
@@ -18,20 +17,34 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <Layout preview={preview}>
-      <Container>
-        <Header />
-        {router.isFallback ? (
-          <div>Loading...</div>
-        ) : (
-          <>
-            <article>
-              <Head>
-                <title>{post.title[0].text} | TTT</title>
-                <meta property="og:image" content={post.coverimage.url} />
-              </Head>
-              <>
-                <div>{post.title[0].text}</div>
-                <div className="hidden md:block md:mb-12">
+      <Header />
+      {router.isFallback ? (
+        <div>Loading...</div>
+      ) : (
+        <>
+          <article>
+            <Head>
+              <title>{post.title[0].text} | TTT</title>
+              <meta property="og:image" content={post.coverimage.url} />
+            </Head>
+            <>
+              <div>{post.title[0].text}</div>
+              <div className="hidden md:block md:mb-12">
+                {post.author && (
+                  <Avatar
+                    name={post.author.name}
+                    picture={post.author.picture}
+                  />
+                )}
+              </div>
+              <div className="mb-8 md:mb-16 sm:mx-0">
+                <CoverImage
+                  title={RichText.asText(post.title)}
+                  url={post.coverImage.url}
+                />
+              </div>
+              <div className="max-w-2xl mx-auto">
+                <div className="block md:hidden mb-6">
                   {post.author && (
                     <Avatar
                       name={post.author.name}
@@ -39,33 +52,17 @@ export default function Post({ post, morePosts, preview }) {
                     />
                   )}
                 </div>
-                <div className="mb-8 md:mb-16 sm:mx-0">
-                  <CoverImage
-                    title={RichText.asText(post.title)}
-                    url={post.coverImage.url}
-                  />
+                <div className="mb-6 text-lg">
+                  <Date dateString={post.date} />
                 </div>
-                <div className="max-w-2xl mx-auto">
-                  <div className="block md:hidden mb-6">
-                    {post.author && (
-                      <Avatar
-                        name={post.author.name}
-                        picture={post.author.picture}
-                      />
-                    )}
-                  </div>
-                  <div className="mb-6 text-lg">
-                    <Date dateString={post.date} />
-                  </div>
-                </div>
-              </>
-              <div className="max-w-2xl mx-auto">
-                <RichText render={post.content} />
               </div>
-            </article>
-          </>
-        )}
-      </Container>
+            </>
+            <div className="max-w-2xl mx-auto">
+              <RichText render={post.content} />
+            </div>
+          </article>
+        </>
+      )}
     </Layout>
   );
 }
