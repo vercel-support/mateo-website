@@ -8,7 +8,7 @@ export default function Header() {
     <>
       <div className="container mx-auto px-5">
         <div className="flex flex-row items-center mb-8 mt-8">
-          <h2 className="text-xl md:text-xl font-extrabold italic">
+          <h2 className="text-4xl md:text-4xl font-extrabold italic">
             <Link href="/">MATEO</Link>
           </h2>
           <div className="flex-grow"></div>

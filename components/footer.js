@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-black ">
       <div className="py-28 flex flex-col items-start container mx-auto">
-        <h3 className="text-4xl lg:text-5xl font-bold text-white tracking-tighter leading-tight text-left mb-10">
+        <h3 className="text-4xl lg:text-5xl font-bold text-white text-left mb-10">
           RENT BETTER WITH MATEO
         </h3>
         <div className="mb-32">

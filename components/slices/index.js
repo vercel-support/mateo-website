@@ -1,1 +1,9 @@
+export { default as BlogPostPreviews } from "./BlogPostPreviews";
+export { default as HeroMain } from "./HeroMain";
+export { default as HeroPlain } from "./HeroPlain";
+export { default as ImageText } from "./ImageText";
+export { default as Signup } from "./Signup";
+export { default as Text } from "./Text";
 export { default as TextImage } from "./TextImage";
+export { default as TextImageCenter } from "./TextImageCenter";
+export { default as ThreeColumns } from "./ThreeColumns";
