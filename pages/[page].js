@@ -2,7 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ErrorPage from "next/error";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
 import { RichText } from "prismic-reactjs";

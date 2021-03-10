@@ -1,7 +1,7 @@
 import Layout from "../components/layout";
 
 import Head from "next/head";
-import Header from "../components/header";
+import Header from "../components/Header";
 
 import { getAllPostsForHome, getHome } from "../lib/api";
 import MoreStories from "../components/more-stories";
