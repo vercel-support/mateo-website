@@ -7,24 +7,6 @@ import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
 import SliceZone from "../components/SliceZone";
 
-export async function getStaticProps({ params, preview = false, previewData }) {
-  const data = await getPage(params.page, previewData);
-  return {
-    props: {
-      preview,
-      page: data?.page ?? null,
-    },
-  };
-}
-
-export async function getStaticPaths() {
-  const allPages = await getAllPagesWithSlug();
-  return {
-    paths: allPages?.map(({ node }) => `/${node._meta.uid}`) || [],
-    fallback: true,
-  };
-}
-
 export default function Post({ page, preview }) {
   const router = useRouter();
   console.log(page);
@@ -46,4 +28,22 @@ export default function Post({ page, preview }) {
       )}
     </Layout>
   );
+}
+
+export async function getStaticProps({ params, preview = false, previewData }) {
+  const data = await getPage(params.page, previewData);
+  return {
+    props: {
+      preview,
+      page: data?.page ?? null,
+    },
+  };
+}
+
+export async function getStaticPaths() {
+  const allPages = await getAllPagesWithSlug();
+  return {
+    paths: allPages?.map(({ node }) => `/${node._meta.uid}`) || [],
+    fallback: true,
+  };
 }
