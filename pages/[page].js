@@ -5,13 +5,14 @@ import ErrorPage from "next/error";
 import Header from "../components/Header";
 import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
-import { RichText } from "prismic-reactjs";
 import SliceZone from "../components/SliceZone";
 
 export default function Post({ page, preview }) {
   const router = useRouter();
   console.log(page);
-
+  if (!router.isFallback && !page?._meta?.uid) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <Layout preview={preview}>
       <Header />
@@ -41,7 +42,6 @@ export async function getStaticProps({ params, preview = false, previewData }) {
 
 export async function getStaticPaths() {
   const allPages = await getAllPagesWithSlug();
-
   return {
     paths: allPages?.map(({ node }) => `/${node._meta.uid}`) || [],
     fallback: true,

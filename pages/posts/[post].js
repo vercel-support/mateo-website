@@ -12,7 +12,6 @@ import CoverImage from "../../components/cover-image";
 
 export default function Post({ post, morePosts, preview }) {
   const router = useRouter();
-  console.log(post);
   if (!router.isFallback && !post?._meta?.uid) {
     return <ErrorPage statusCode={404} />;
   }
@@ -70,7 +69,6 @@ export default function Post({ post, morePosts, preview }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPostAndMorePosts(params.post, previewData);
-
   return {
     props: {
       preview,
@@ -82,7 +80,6 @@ export async function getStaticProps({ params, preview = false, previewData }) {
 
 export async function getStaticPaths() {
   const allPosts = await getAllPostsWithSlug();
-  console.log(allPosts[0].node._meta.uid);
   return {
     paths: allPosts?.map(({ node }) => `/posts/${node._meta.uid}`) || [],
     fallback: true,
