@@ -2,10 +2,9 @@ import React from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import ErrorPage from "next/error";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
-import { RichText } from "prismic-reactjs";
 import SliceZone from "../components/SliceZone";
 
 export default function Post({ preview, page }) {
@@ -32,6 +31,7 @@ export default function Post({ preview, page }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPage(params.page, previewData);
+  console.log("Data" + data);
   return {
     props: {
       preview,
@@ -42,7 +42,6 @@ export async function getStaticProps({ params, preview = false, previewData }) {
 
 export async function getStaticPaths() {
   const allPages = await getAllPagesWithSlug();
-  console.log(allPages);
   return {
     paths: allPages?.map(({ node }) => `/${node._meta.uid}`) || [],
     fallback: true,
