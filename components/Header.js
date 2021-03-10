@@ -12,28 +12,7 @@ export default function Header() {
             <Link href="/">MATEO</Link>
           </h2>
           <div className="flex-grow"></div>
-          <div className="hidden md:flex flex-row items-center">
-            <h2 className="text-lg  mr-10">
-              <Link href="/funktionen">
-                <a className="hover:underline">Funktionen</a>
-              </Link>
-            </h2>
-            <h2 className="text-lg mr-10">
-              <Link href="/ueberuns">
-                <a className="hover:underline">Preis</a>
-              </Link>
-            </h2>
-            <h2 className="text-lg mr-10">
-              <Link href="/ueberuns">
-                <a className="hover:underline">Blog</a>
-              </Link>
-            </h2>
-            <h2 className="text-lg mr-10">
-              <Link href="/ueberuns">
-                <a className="hover:underline">Über Uns</a>
-              </Link>
-            </h2>
-          </div>
+          <div className="hidden md:flex flex-row items-center"></div>
           <div className="flex md:hidden" onClick={() => setIsOpen(!isOpen)}>
             <img src="./images/menu.svg" width="20px;" height="20px;" />
           </div>
@@ -50,7 +29,7 @@ export default function Header() {
             <div className="z-50 pl-5 fixed inset-0 mt-8 pr-5 bg-white w-full">
               <div className="flex flex-row items-center">
                 <div>
-                  <h2 className="text-2xl md:text-4xl font-bold">
+                  <h2 className="text-2xl md:text-4xl font-extrabold italic">
                     <Link href="/">
                       <a className="hover:underline">MATEO</a>
                     </Link>
@@ -61,16 +40,6 @@ export default function Header() {
                   <img src="./images/cross.svg" width="20px;" height="20px;" />
                 </div>
               </div>
-              <h2 className="text-xl font-bold mt-5 mr-10">
-                <Link href="/funktionen">
-                  <a className="hover:underline">Funktionen</a>
-                </Link>
-              </h2>
-              <h2 className="text-xl font-bold mt-5 mr-10">
-                <Link href="/ueberuns">
-                  <a className="hover:underline">Über Uns</a>
-                </Link>
-              </h2>
             </div>
           </Transition>
         </div>

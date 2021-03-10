@@ -7,7 +7,6 @@ export default function Layout({ preview, children }) {
     <>
       <Meta />
       <div className="min-h-screen overflow-hidden">
-        <Alert preview={preview} />
         <main>{children}</main>
       </div>
       <Footer />
