@@ -30,9 +30,20 @@ export default function Post({ page, preview }) {
   );
 }
 
-export async function getStaticProps({ params, preview = false, previewData }) {
+export async function getStaticProps({
+  params,
+  preview = false,
+  previewData,
+  notFound,
+}) {
   const data = await getPage(params.page, previewData);
   console.log("Data" + data);
+  if (!data) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       preview,
