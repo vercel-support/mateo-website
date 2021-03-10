@@ -32,6 +32,7 @@ export default function Post({ page, preview }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPage(params.page, previewData);
+  console.log("Data" + data);
   return {
     props: {
       preview,
