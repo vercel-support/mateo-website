@@ -29,24 +29,9 @@ export default function Post({ preview, page }) {
   );
 }
 
-export async function getStaticProps({
-  params,
-  preview = false,
-  previewData,
-  notFound,
-}) {
+export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPage(params.page, previewData);
-<<<<<<< HEAD
-  console.log("Data" + data);
-  if (!data) {
-    return {
-      notFound: true,
-    };
-  }
-
-=======
   console.log("Data");
->>>>>>> prismic
   return {
     props: {
       preview,
