@@ -11,9 +11,7 @@ import SliceZone from "../components/SliceZone";
 export default function Post({ page, preview }) {
   const router = useRouter();
   console.log(page);
-  if (!router.isFallback && !page?._meta?.uid) {
-    return <ErrorPage statusCode={404} />;
-  }
+
   return (
     <Layout preview={preview}>
       <Header />
@@ -43,7 +41,7 @@ export async function getStaticProps({ params, preview = false, previewData }) {
 
 export async function getStaticPaths() {
   const allPages = await getAllPagesWithSlug();
-  console.log(allPages);
+
   return {
     paths: allPages?.map(({ node }) => `/${node._meta.uid}`) || [],
     fallback: true,
