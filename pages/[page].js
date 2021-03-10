@@ -7,12 +7,11 @@ import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
 import SliceZone from "../components/SliceZone";
 
-export default function Post({ page, preview }) {
+export default function Post({ preview, page }) {
   const router = useRouter();
   console.log(page);
-  if (!router.isFallback && !page?._meta?.uid) {
-    return <ErrorPage statusCode={404} />;
-  }
+  console.log(router.isFallback);
+
   return (
     <Layout preview={preview}>
       <Header />
@@ -37,6 +36,7 @@ export async function getStaticProps({
   notFound,
 }) {
   const data = await getPage(params.page, previewData);
+<<<<<<< HEAD
   console.log("Data" + data);
   if (!data) {
     return {
@@ -44,6 +44,9 @@ export async function getStaticProps({
     };
   }
 
+=======
+  console.log("Data");
+>>>>>>> prismic
   return {
     props: {
       preview,

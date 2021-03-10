@@ -25,7 +25,7 @@ export default function Homepage({ preview, home }) {
 
 export async function getStaticProps({ preview = false, previewData }) {
   const home = await getHome(previewData);
-
+  console.log("Home" + home);
   return {
     props: { preview, home },
   };
