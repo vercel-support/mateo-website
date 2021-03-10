@@ -11,9 +11,7 @@ export default function Post({ preview, page }) {
   const router = useRouter();
   console.log(page);
   console.log(router.isFallback);
-  if (!router.isFallback && !page?._meta?.uid) {
-    return <ErrorPage statusCode={404} />;
-  }
+
   return (
     <Layout preview={preview}>
       <Header />
@@ -33,7 +31,7 @@ export default function Post({ preview, page }) {
 
 export async function getStaticProps({ params, preview = false, previewData }) {
   const data = await getPage(params.page, previewData);
-  console.log("Data" + data);
+  console.log("Data");
   return {
     props: {
       preview,
