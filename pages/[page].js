@@ -11,7 +11,9 @@ export default function Post({ preview, page }) {
   const router = useRouter();
   console.log(page);
   console.log(router.isFallback);
-
+  if (!router.isFallback && !page?._meta?.uid) {
+    return <ErrorPage statusCode={404} />;
+  }
   return (
     <Layout preview={preview}>
       <Header />
