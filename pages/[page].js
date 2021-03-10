@@ -7,7 +7,7 @@ import Layout from "../components/layout";
 import { getAllPagesWithSlug, getPage } from "../lib/api";
 import SliceZone from "../components/SliceZone";
 
-export default function Post({ preview, page }) {
+export default function Page({ preview, page }) {
   const router = useRouter();
   console.log(page);
   console.log(router.isFallback);
