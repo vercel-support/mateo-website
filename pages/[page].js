@@ -8,12 +8,11 @@ import { getAllPagesWithSlug, getPage } from "../lib/api";
 import { RichText } from "prismic-reactjs";
 import SliceZone from "../components/SliceZone";
 
-export default function Post({ page, preview }) {
+export default function Post({ preview, page }) {
   const router = useRouter();
   console.log(page);
-  if (!router.isFallback && !page?._meta?.uid) {
-    return <ErrorPage statusCode={404} />;
-  }
+  console.log(router.isFallback);
+
   return (
     <Layout preview={preview}>
       <Header />
