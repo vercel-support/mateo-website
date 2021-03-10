@@ -20,7 +20,7 @@ export default function Page({ preview, page }) {
       ) : (
         <>
           <Head>
-            <title>{page.title[0].text}</title>
+            <title>Test</title>
           </Head>
           <SliceZone sliceZone={page.body}></SliceZone>
         </>
